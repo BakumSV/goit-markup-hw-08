@@ -1,0 +1,121 @@
+.header__container {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+  margin-left: 93px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.header-nav__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.header-nav__link {
+  display: block;
+  padding-top: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-top: 28px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.header-nav__link:hover.header-nav__link::after,
+.header-nav__link:focus.header-nav__link::after {
+  background-color: var(--accent-color);
+}
+
+.header-nav__link--active {
+  color: var(--accent-color);
+
+  &::after {
+    background-color: var(--accent-color);
+  }
+}
+
+.header-contacts__list {
+  display: flex;
+  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-contacts__item {
+    &:last-child {
+      margin-left: 50px;
+    }
+  }
+}
+.header-contacts__link {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  fill: var(--secondary-text-color);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}
+
+.header-contacts__icon-env {
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+}
+.header-contacts__icon-phone {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+}
+.header__border {
+  height: 0px;
+  left: 0px;
+  top: 80px;
+  border: 1px solid #ececec;
+}
