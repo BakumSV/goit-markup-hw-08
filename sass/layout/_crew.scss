@@ -1,5 +1,9 @@
 .crew-section {
   background-color: var(--third-background-color);
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .crew {
   display: block;
@@ -14,6 +18,8 @@
 }
 .crew-list {
   width: 100%;
+  padding-top: 30px;
+  padding-bottom: 24px;
   background-color: var(--white-color);
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -30,9 +36,15 @@
       margin-left: 30px;
     }
   }
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
 }
 .crew-list__item {
   padding-top: 30px;
+  padding-bottom: 16px;
 }
 .crew__name {
   margin-bottom: 10px;
@@ -47,9 +59,9 @@
   line-height: 1.19;
   color: var(--secondary-text-color);
 }
-.crew__icon-row {
-  margin: 16px 32px 30px 32px;
-}
+// .crew__icon-row {
+//   margin: 16px 32px 30px 32px;
+// }
 .crew__icon-list {
   justify-content: center;
   display: flex;
